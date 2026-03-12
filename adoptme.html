@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>แบบฟอร์มขอรับอุปการะสุนัข</title>
+    <style>
+        body { font-family: sans-serif; margin: 20px auto; max-width: 700px; padding-bottom: 50px; }
+        h1 { color: #8B4513; text-align: center; }
+        fieldset { border: 1px solid #ccc; border-radius: 8px; margin-bottom: 20px; padding: 20px; background-color: #fdfdfd; }
+        legend { font-weight: bold; font-size: 1.1em; color: #333; }
+        label { display: block; margin-top: 15px; font-weight: bold; }
+        input[type="text"], input[type="tel"], input[type="email"], input[type="number"], select, textarea {
+            width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;
+        }
+        .radio-group, .checkbox-group { display: flex; align-items: center; margin-top: 10px; gap: 10px; }
+        .radio-group label, .checkbox-group label { margin-top: 0; font-weight: normal; }
+        button { margin-top: 20px; padding: 10px 20px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 1em; width: 100%;}
+        .footer-center { position: fixed; bottom: 0; left: 0; width: 100%; text-align: center; font-weight: bold; background-color: #f1f1f1; padding: 10px 0; border-top: 1px solid #ccc;}
+    </style>
+</head>
+
+<body>
+
+<h1>แบบฟอร์มแจ้งความสนใจรับอุปการะสุนัข</h1>
+
+<form id="adoptForm" action="#" method="get">
+
+<fieldset>
+<legend>ข้อมูลส่วนตัวของผู้สนใจรับอุปการะสุนัข</legend>
+
+<label for="fullname">ชื่อ - นามสกุล:</label>
+<input type="text" id="fullname" name="fullname">
+
+<label for="phone">เบอร์ติดต่อ:</label>
+<input type="tel" id="phone" name="phone">
+
+<label for="email">Email:</label>
+<input type="email" id="email" name="email" >
+
+</fieldset>
+
+<fieldset>
+
+<legend>สิ่งแวดล้อมในการเลี้ยงดู</legend>
+
+<label for="address">ที่อยู่:</label>
+<textarea id="address" name="address" rows="3"></textarea>
+
+<label for="housing">ลักษณะที่พักอาศัย:</label>
+
+<select id="housing" name="housing">
+<option value="">-- โปรดเลือก --</option>
+<option value="farmhouse">บ้านสวน</option>
+<option value="single_house">บ้านเดี่ยว</option>
+<option value="townhouse">บ้านทาวน์โฮม</option>
+<option value="condo">คอนโดมิเนียม/หอพัก</option>
+</select>
+
+<label>สถานที่เลี้ยงสุนัขหลัก:</label>
+
+<div class="radio-group">
+
+<input type="radio" id="indoor" name="location" value="indoor">
+<label for="indoor">เลี้ยงสุนัขภายในบ้าน</label>
+
+<input type="radio" id="outdoor" name="location" value="outdoor">
+<label for="outdoor">เลี้ยงสุนัขภายนอกบ้าน</label>
+
+</div>
+
+<label for="pet_count">จำนวนสัตว์เลี้ยงที่มีอยู่ปัจจุบัน:</label>
+
+<input type="number" id="pet_count" name="pet_count" min="0">
+
+<div class="checkbox-group" style="margin-top:20px;background-color:#fff3cd;padding:10px;border-radius:5px;">
+
+<input type="checkbox" id="agreement" name="agreement">
+
+<label for="agreement">
+<strong>รับทราบ:</strong> การส่งแบบฟอร์มนี้เป็นการแจ้งความสนใจ โดยไม่รับรองการได้รับอุปการะสุนัข
+</label>
+
+</div>
+
+</fieldset>
+
+<button type="submit">ส่งแบบฟอร์มแจ้งความสนใจ</button>
+
+</form>
+
+<div class="footer-center">
+6833292321 | อิทธิพงษ์ กรป้องกัน
+</div>
+
+<script src="adoptme.js"></script>
+
+</body>
+</html>
